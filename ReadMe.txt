@@ -30,17 +30,15 @@ SAMPLE OUTPUT:
   Sorted Array:   [2, 3, 4, 6, 7, 8, 12, 15, 18, 19]
 
 HOW TO RUN:
-1. Navigate to the Task1_MultithreadedSortingApp folder
-2. Compile:
-       javac *.java
-3. Run:
-       java Multithreading
+Run with jar file:
+java -jar MultithreadedSort.jar
 
 NOTE: The input array is hardcoded in Multithreading.java.
       To change it, modify the unsortedArray variable.
 
 FILE STRUCTURE:
   Task1_MultithreadedSortingApp/
+  |-- MultithreadedSort.jar Executable jar file
   |-- Multithreading.java   Main class, defines global arrays
   |-- SortThread.java       Sorts a subarray using Arrays.sort()
   |-- MergeThread.java      Merges two sorted halves into one
@@ -72,21 +70,17 @@ Example input.txt:
   - Priority     : lower number = higher priority
 
 HOW TO RUN:
-1. Navigate to the Task2_CPUSchedulingSim folder
-2. Place your input file in the SAME folder 
-   (input.txt file is provided, you may replace its contents)
-3. Compile:
-       javac *.java
-4. Run:
-       java CPUSchedulingSim
-5. When prompted, enter the file name:
-       File name: input.txt
-
+Run with jar file:
+   java -jar CPUSchedulingSim.jar
+When prompted, enter the file name:
+   File name: input.txt
    Or enter the full path if the file is elsewhere:
        File name: C:\Users\YourName\Desktop\input.txt
-
-6. Choose a scheduling algorithm (1-4)
-7. If Round Robin is chosen, enter a time quantum when prompted
+NOTE: An input.txt file is provided in the folder.
+   You may replace its contents with your own processes
+   following the format above.
+Choose a scheduling algorithm (1-4).
+   If Round Robin is chosen, enter a time quantum when prompted.
 
 OUTPUT:
 The program prints progress of each process and then:
@@ -97,6 +91,7 @@ The program prints progress of each process and then:
 
 FILE STRUCTURE:
   Task2_CPUSchedulingSim/
+  |-- CPUSchedulingSim.jar Executable jar file
   |-- CPUSchedulingSim.java    Main UI and menu
   |-- FileReader.java          Reads and parses input.txt
   |-- Process.java             Process data model
