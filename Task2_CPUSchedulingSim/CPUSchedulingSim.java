@@ -8,8 +8,6 @@ public class CPUSchedulingSim {
     
     public static void main(String[] args) {
         
-        List<Process> processes = new ArrayList<>();
-
         // Print Program Name
         System.out.println("--------------------------------");
         System.out.println("--- CPU SCHEDULING SIMULATOR ---");
@@ -23,6 +21,8 @@ public class CPUSchedulingSim {
         System.out.print("File name: ");
 
         try (Scanner scanner = new Scanner(System.in);){
+            List<Process> processes;
+
              // Get file and parse
             String filename = scanner.nextLine().trim();
             try { 
