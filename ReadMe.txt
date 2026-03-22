@@ -1,3 +1,15 @@
+Quick View:
+
+TASK 1 - Multithreaded Sorting Application
+Run with jar file: 
+   java -jar MultithreadedSort.jar
+
+TASK 2 - CPU Scheduling Simulator
+Run with jar file:
+   java -jar CPUSchedulingSim.jar
+
+
+
 ================================================================
 CS4310.03 - Operating Systems(Spring 2026)
 Jeannette Ruiz | Project 1
