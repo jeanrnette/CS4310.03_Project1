@@ -1,6 +1,6 @@
 ================================================================
 CS4310.03 - Operating Systems(Spring 2026)
-Jeannette Ruiz | Bronco ID: 018120531 | Project 1
+Jeannette Ruiz | Project 1
 ================================================================
 
 PROJECT OVERVIEW
