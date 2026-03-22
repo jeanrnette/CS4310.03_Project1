@@ -11,23 +11,31 @@ public class CPUSchedulingSim {
         Scanner scanner = new Scanner(System.in);
         List<Process> processes = new ArrayList<>();
 
-        
-        // Prompt user on what the program does
+        // Print Program Name
+        System.out.println("--------------------------------");
+        System.out.println("--- CPU SCHEDULING SIMULATOR ---");
+        System.out.println("--------------------------------");
+        // Print what program does
         System.out.println("This program simulates a CPU scheduling algorithm.");
 
-        // Recieve text file from user
-        System.out.println("Input your file name: ");
+        // Prompt user to enter file name
+        System.out.println("\nEnter the path to your input file.");System.out.println("File must follow format: Pid Arrival_Time Burst_Time Priority");
+        System.out.println("Example: input.txt or C:\\Users\\user\\input.txt");
+        System.out.print("File name: ");
+
+        // Get file and parse
         String filename = scanner.nextLine().trim();
         try { 
             processes = FileReader.load(filename);
-            System.out.println("Your file contains " + processes.size() + " processes.");
+            System.out.println("\nYour file contains " + processes.size() + " processes.");
         } catch (Exception e) {
             System.out.println("Error loading file: " + e.getMessage());
+            System.out.println("Please make sure the file exists and try again.");
+            return;
         }
         
-       
-         // Ask user to choose a scheduling algoirthm
-        System.out.println("Choose a sorting algorithm: \n[1] First Come First Serve (FCFS) \n[2] Shortest Job First (SJF) \n[3] Preemptive Priorty Scheduling \n[4] Round Robin");
+        // Ask user to choose a scheduling algoirthm
+        System.out.println("\nChoose a sorting algorithm: \n[1] First Come First Serve (FCFS) \n[2] Shortest Job First (SJF) \n[3] Preemptive Priorty Scheduling \n[4] Round Robin");
 
         choice = scanner.nextInt();
 
