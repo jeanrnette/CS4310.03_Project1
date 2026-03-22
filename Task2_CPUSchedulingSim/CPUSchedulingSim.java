@@ -31,6 +31,7 @@ public class CPUSchedulingSim {
         } catch (Exception e) {
             System.out.println("Error loading file: " + e.getMessage());
             System.out.println("Please make sure the file exists and try again.");
+            scanner.close();
             return;
         }
         
@@ -46,7 +47,8 @@ public class CPUSchedulingSim {
                 fcfs.run();
                 break;
             case 2:
-                
+                SJF sjf = new SJF(processes);
+                sjf.run();
                 break;
             case 3: 
                 

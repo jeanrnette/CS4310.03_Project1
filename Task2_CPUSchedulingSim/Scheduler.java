@@ -30,6 +30,13 @@ public abstract class Scheduler {
         System.out.println("Time " + currentTime + " : Process " + p.pid + " COMPLETED");
     }
 
+    // updateStats()
+    public void calculateStats(int currentTime, Process p) {
+        p.completionTime    = currentTime;
+        p.turnaroundTime    = p.completionTime - p.arrivalTime;
+        p.waitTime          = p.turnaroundTime - p.burst;
+        p.responseTime      = p.startTime - p.arrivalTime;
+    }
 
     // printStats(): Print out stats regarding averages and CPU utilization.
     public void printStats(int totalTime) {

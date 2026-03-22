@@ -9,7 +9,7 @@ public class FCFS extends Scheduler {
     @Override
     public void run() {
         
-        // Sort the process
+        // Sort the processes
         processes.sort(
             // First sort by arrival Time
             Comparator.comparingInt((Process p) -> p.arrivalTime)
