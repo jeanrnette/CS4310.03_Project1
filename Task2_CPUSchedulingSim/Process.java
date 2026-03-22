@@ -7,7 +7,7 @@ public class Process {
     public int priority;       // 1 = highest priority
 
     // Process Timing
-    public int remainingTime = burst;
+    public int remainingTime;
     public int completionTime;
 
     public int waitTime = 0;

@@ -20,17 +20,19 @@ public abstract class Scheduler {
     
     public abstract void run();
 
-
+    // printRunning(): Start running a process.
     public void printRunning(int currentTime, Process p) {
         // Time # : Process # running (#ms remaining)
         System.out.println("Time " + currentTime + " : Process " + p.pid + " running (" + p.remainingTime + "ms remaining)");
     }
 
+    // printPause(): Pause a process (preemptive)
     public void printPause(int currentTime, Process p) {
         // Time # : Process # running (#ms remaining)
         System.out.println("Time " + currentTime + " : Process " + p.pid + " paused (" + p.remainingTime + "ms remaining)");
     }
 
+    //printComplete(): Complete a process
     public void printCompleted(int currentTime, Process p) {
         System.out.println("Time " + currentTime + " : Process " + p.pid + " COMPLETED");
     }
