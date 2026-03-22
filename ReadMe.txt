@@ -2,7 +2,7 @@ Quick View:
 
 TASK 1 - Multithreaded Sorting Application
 Run with jar file: 
-   java -jar MultithreadedSort.jar
+   java -jar Multithreading.jar
 
 TASK 2 - CPU Scheduling Simulator
 Run with jar file:
@@ -43,7 +43,7 @@ SAMPLE OUTPUT:
 
 HOW TO RUN:
 Run with jar file:
-java -jar MultithreadedSort.jar
+java -jar Multithreading.jar
 
 NOTE: The input array is hardcoded in Multithreading.java.
       To change it, modify the unsortedArray variable.
