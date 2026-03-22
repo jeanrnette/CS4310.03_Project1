@@ -51,7 +51,8 @@ public class CPUSchedulingSim {
                 sjf.run();
                 break;
             case 3: 
-                
+                PreemptivePriority pp = new PreemptivePriority(processes);
+                pp.run();
                 break;
             case 4: 
                 

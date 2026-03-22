@@ -23,7 +23,12 @@ public abstract class Scheduler {
 
     public void printRunning(int currentTime, Process p) {
         // Time # : Process # running (#ms remaining)
-        System.out.println("Time " + currentTime + " : Process " + p.pid + " running (" + p.burst + "ms remaining)");
+        System.out.println("Time " + currentTime + " : Process " + p.pid + " running (" + p.remainingTime + "ms remaining)");
+    }
+
+    public void printPause(int currentTime, Process p) {
+        // Time # : Process # running (#ms remaining)
+        System.out.println("Time " + currentTime + " : Process " + p.pid + " paused (" + p.remainingTime + "ms remaining)");
     }
 
     public void printCompleted(int currentTime, Process p) {

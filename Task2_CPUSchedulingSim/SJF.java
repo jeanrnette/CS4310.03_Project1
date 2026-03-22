@@ -40,17 +40,17 @@ public class SJF extends Scheduler {
             thenComparingInt((Process p) -> p.arrivalTime));
 
             // Get the current processs
-            Process currentProcess = availableProcesses.get(0);
-            currentProcess.startTime = currentTime;
+            Process currentP = availableProcesses.get(0);
+            currentP.startTime = currentTime;
 
             // [3] Run the current process
-            printRunning(currentTime, currentProcess);
-            currentTime += currentProcess.burst;
-            calculateStats(currentTime, currentProcess);
+            printRunning(currentTime, currentP);
+            currentTime += currentP.burst;
+            calculateStats(currentTime, currentP);
 
             // [4] Remove the current process from remaining and print complete
-            remainingProcesses.remove(currentProcess);
-            printCompleted(currentTime, currentProcess);
+            remainingProcesses.remove(currentP);
+            printCompleted(currentTime, currentP);
         }
         //Print the average stats
         printStats(currentTime);
